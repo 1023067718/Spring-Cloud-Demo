@@ -12,3 +12,5 @@ spring-cloud-service-admin/target/
 spring-cloud-zuul/target/
 
 spring-cloud-config/target/
+
+spring-cloud-zipkin/target/
