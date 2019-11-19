@@ -1,15 +1,8 @@
 spring:
-  application:
-    name: spring-cloud-web-admin-feign
-
-server:
-  port: 8765
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-feign:
-  hystrix:
-    enabled: true
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: web-admin-feign
+      label: master
+      profile: dev
+#      profile: prod
