@@ -20,12 +20,12 @@ zuul:
       serviceId: spring-cloud-web-admin-feign
 # 在启动的时候初始化客户端
 #  开启Ribbon的饥饿加载模式
-  ribbon:
-    connectTimeout: 500
-    readTimeout: 3000
-    eager-load:
-      enabled: true
-      clients: spring-cloud-web-admin-ribbon
+ribbon:
+  connectTimeout: 3000
+  readTimeout: 3000
+  eager-load:
+    enabled: true
+    clients: spring-cloud-web-admin-ribbon
 
 hystrix:
   command:

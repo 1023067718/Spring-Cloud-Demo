@@ -17,6 +17,7 @@ public class AdminService {
     }
 
     public String hiError(String message) {
+        System.out.println("ribbon hystrix");
         return String.format("Hi your message is : %s but request bad", message);
     }
 }
