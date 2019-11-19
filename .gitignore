@@ -1,0 +1,8 @@
+
+.idea/
+
+*.iml
+
+spring-cloud-web-admin-feign/target/
+
+spring-cloud-web-admin-ribbon/target/
