@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+
+server:
+  port: 8769
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: spring-cloud-web-admin-ribbon
+    api-b:
+      path: /api/b/**
+      serviceId: spring-cloud-web-admin-feign
+# 在启动的时候初始化客户端
+#  开启Ribbon的饥饿加载模式
+  ribbon:
+    connectTimeout: 500
+    readTimeout: 3000
+    eager-load:
+      enabled: true
+      clients: spring-cloud-web-admin-ribbon
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000

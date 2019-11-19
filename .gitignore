@@ -6,3 +6,7 @@
 spring-cloud-web-admin-feign/target/
 
 spring-cloud-web-admin-ribbon/target/
+
+spring-cloud-service-admin/target/
+
+spring-cloud-zuul/target/
